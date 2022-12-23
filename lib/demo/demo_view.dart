@@ -24,9 +24,15 @@ class DemoPage extends StatelessWidget {
         children: [
           ElevatedButton(onPressed: () {
 
+            bloc.add(decrement());
+
           }, child: Text("-")),
-          Text("0"),
+          BlocBuilder<DemoBloc,int>(builder: (context, state) {
+            return Text("$state");
+          },),
           ElevatedButton(onPressed: () {
+
+            bloc.add(increment());
 
           }, child: Text("+"))
         ],
