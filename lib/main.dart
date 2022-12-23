@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:googleads/second.dart';
+import 'package:googleads/textbloc/textbloc_view.dart';
 import 'package:native_ads_flutter/native_ads.dart';
 
 import 'demo/demo_view.dart';
@@ -11,7 +12,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
   runApp(MaterialApp(
-    home: DemoPage(),
+    home: TextblocPage(),
   ));
 }
 
